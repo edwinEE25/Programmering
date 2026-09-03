@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Intro</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+   
+  var player = { 
+
+    x: -100,
+    y: 450,
+    storlek: 50,
+    speed: 10
+
+}
+  
+  
+  
+
+
+
+
+ function update() {
+clearScreen() ;
+    
+circle()
+
+
+
+
+
+
+rectangle(0, 500, 1000000, 500,  "green")
+   rectangle(0, 0, 1000000, 500,  "lightblue")
+
+
+
+circle(player.x, player.y, player.storlek, "red")
+
+player.speed = player.speed + 0
+
+
+player.x = player.x + player.speed
+
+if(player.x > totalWidth + 40) {
+
+    player.x = 300
+    player.speed = 10
+}
+ }
+
+ 
+ 
+ 
+ 
+ 
+ 
+ </script>
+</body>
+</html>
