@@ -19,27 +19,32 @@
       directionY: -1
     };
  
- 
+    var enemy = { 
+      x: 100,
+      y: 100,
+      bredd: 50,
+      hojd: 50, 
+      color: "red",
+      speedX: 5,
+      speedY: 0, 
+      directionX: 1,
+      directionY: 1
+    }
+
+
+
  function update() {
   clearScreen();
   circle(player.x, player.y, player.size, player.color);
   player.x = player.x + player.speedX * player.directionX;
   player.y = player.y + player.speedY * player.directionY;
   // console.log(player.y)
- }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- </script>
+
+  rectangle(enemy.x, enemy.y, enemy.bredd, enemy.hojd, enemy.color)
+  enemy.x = enemy.x + enemy.speedX * enemy.directionX
+  enemy.y = enemy.y + enemy.speedY * enemy.directionY
+}
+
+</script>
 </body>
 </html>
