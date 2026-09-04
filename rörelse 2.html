@@ -9,20 +9,22 @@
   <script src="http://koda.nu/simple.js">
     
     var player = {
-      x: 50, 
-      y: 50, 
+      x: 800, 
+      y: 500, 
       size: 40,
       color: "blue",
-      speedX: 10,
-      speedY: 5 
+      speedX: 5,
+      speedY: 2, 
+      directionX: -1,
+      directionY: -1
     };
  
  
  function update() {
   clearScreen();
   circle(player.x, player.y, player.size, player.color);
-  player.x = player.x + player.speedX;
-  player.y = player.y + player.speedY;
+  player.x = player.x + player.speedX * player.directionX;
+  player.y = player.y + player.speedY * player.directionY;
   // console.log(player.y)
  }
  
