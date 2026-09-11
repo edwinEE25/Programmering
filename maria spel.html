@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Game — Kapitel 1</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+
+    // Marken
+    rectangle(0, 420, 800, 80, "green");
+
+    // Huset (hemmabasen)
+    rectangle(60, 260, 160, 160, "burlywood");
+    triangle(40, 260, 240, 260, 140, 150, "firebrick");
+    rectangle(110, 340, 50, 80, "saddlebrown");
+    circle(180, 300, 20, "skyblue");
+    line(180, 280, 180, 320, "white");
+    line(160, 300, 200, 300, "white");
+
+    // Grinden (målet, längst bort i trädgården)
+    rectangle(680, 300, 14, 120, "sienna");
+    rectangle(760, 300, 14, 120, "sienna");
+    rectangle(680, 290, 94, 14, "sienna");
+
+    // Solen
+    picture(600, 90, "https://tprealgy.github.io/resources/img/sun.png", 32, 32)
+
+    // Maria
+    circle(250, 340, 22, "peachpuff");         // huvud
+    circle(250, 312, 8, "saddlebrown");        // hårknut
+    circle(244, 336, 3, "black");              // öga vänster
+    circle(256, 336, 3, "black");              // öga höger
+    triangle(230, 412, 270, 412, 250, 362, "crimson"); // klänning
+    line(232, 380, 218, 400, "peachpuff");     // arm vänster
+    line(268, 380, 282, 400, "peachpuff");     // arm höger
+
+    // Texter
+    text(40, 40, 30, "Maria Game", "black");
+    text(40, 75, 20, "Poäng: 0", "black");
+    text(686, 272, 14, "Grinden", "black");
+    text(40, 470, 16, "Marias trädgård", "white");
+
+  </script>
+</body>
+</html>
