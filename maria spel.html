@@ -8,8 +8,14 @@
 </head>
 <body>
   <script src="http://koda.nu/simple.js">
+ 
+    var player = {
 
-    // Marken
+        
+    }
+
+
+// Marken
     rectangle(0, 420, 800, 80, "green");
 
     // Huset (hemmabasen)
@@ -42,6 +48,9 @@
     text(40, 75, 20, "Poäng: 0", "black");
     text(686, 272, 14, "Grinden", "black");
     text(40, 470, 16, "Marias trädgård", "white");
+
+
+    player.x = player.x + player.speed * player.direction
 
   </script>
 </body>
