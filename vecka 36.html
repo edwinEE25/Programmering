@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Intro</title>
+</head>
+ss<body>
+  <script src="http://koda.nu/simple.js">
+    try {
+  nagotSomInteFinns();
+} catch (fel) {
+  console.log("Fångade ett fel: " + fel.message);
+}
+    var player = { x: 100, y: 300, size: 20, color: "blue", speed: 4 };
 
+var zombie1 = { x: 300, y: 220, speed: 2};
+var zombie2 = { x: 500, y: 400, speed: 2};
+var zombie3 = { x: 700, y: 260, speed: 2 };
+
+// STEG 1a: skriv funktionen drawZombie här
+function drawZombie() {
+circle(player.x, player.y, player.size, player.color);  
+}
+function update() {
+  clearScreen();
+  text(20, 30, 24, "Zombiespelet", "black");
+
+  
+
+  drawZombie()
+
+  if (keyboard.right) {
+    player.x = player.x + player.speed;
+  }
+  if (keyboard.left) {
+    player.x = player.x - player.speed;
+  }
+  if (keyboard.up) {
+    player.y = player.y - player.speed;
+  }
+  if (keyboard.down) {
+    player.y = player.y + player.speed;
+  }
+
+  // STEG 2: träffkollen kommer här
+
+}
+  
+  
+  
+  
+  
+  
+  
+  </script>
+</body>
+</html>
