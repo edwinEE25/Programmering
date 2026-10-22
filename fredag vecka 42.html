@@ -129,6 +129,7 @@ for(var i = 0; i < star.length; i++ ) {
 }
 if(distance(player.x, player.y, star[i].x, star[i].y) < 20){
    poang = poang + 10 
+   star.splice(i, 1)
 }
 
 }
