@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Intro</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+    
+var cycle = { x: 20, y: 250, xSpeed: 1, ySpeed: 0, score: 0, size: 10 };
+ 
+line(0, 0, totalWidth, 0, 10, "blue");
+line(0, 0, 0, totalHeight, 10, "blue");
+line(0, totalHeight, totalWidth, totalHeight, 10, "blue");
+line(totalWidth, 0, totalWidth, totalHeight, 10, "blue");
+ 
+line(0, 100, totalWidth, 100, 5, "blue");
+ var randomx = random(totalWidth)
+ var randomy = random(totalHeight)
+ var circleCount = 0;
+var showImage = false;
+
+var imageIndex = 0;
+function update() {
+   rectangle(cycle.x, cycle.y, cycle.size, cycle.size, "blue");
+   circle(randomx, randomy, 5, "red")
+   cycle.score++;
+ 
+   rectangle(10, 10, totalWidth - 20, 80, "white");
+   text(20, 75, 70, "TRON | Score: " + cycle.score, "blue");
+ 
+   if (keyboard.left) { cycle.xSpeed = -1; cycle.ySpeed = 0; }
+   if (keyboard.right) { cycle.xSpeed = 1; cycle.ySpeed = 0; }
+   if (keyboard.up) { cycle.ySpeed = -1; cycle.xSpeed = 0; }
+   if (keyboard.down) { cycle.ySpeed = 1; cycle.xSpeed = 0; }
+ 
+   cycle.x += cycle.xSpeed * cycle.size;
+   cycle.y += cycle.ySpeed * cycle.size;
+   if (getPixel(cycle.x, cycle.y).red != 0 || keyboard.space) {
+    randomx = random(totalWidth), randomy= random(totalHeight)
+    showImage = true
+   }
+    if(showImage) {
+    picture(0, 0, "preview-small.jpg", 1000, 1500)
+    // Ersätt med bildfunktionen för ditt verktyg
+}
+   
+   if (getPixel(cycle.x, cycle.y).blue != 0) {
+       rectangle(cycle.x, cycle.y, cycle.size, cycle.size, "red");
+       alert("END OF LINE");
+       stopUpdate();
+   }
+}
+
+
+
+
+
+  </script>
+</body>
+</html>
