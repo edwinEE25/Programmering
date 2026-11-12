@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 1</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+
+ //kapitel 1 color ( mixcolor(255, 255))
+ //kapitel 2 var player= speed= 1
+ //kapitel 3 function player() {}
+ //kapitel 4 var i = 0 while(i<4) {}
+ //kapitel 5 
+ var player= 
+      x= 800, 
+      y= 500, 
+      size= 40,
+      color="blue",
+      speedX= 5,
+      speedY= 2, 
+      directionX= -1,
+      directionY= -1
+ 
+  
+  function update() {
+  clearScreen();
+  circle(player.x, player.y, player.size, player.color);
+  player.x = player.x + player.speedX * player.directionX;
+  player.y = player.y + player.speedY * player.directionY;}
+  // console.log(player.y)
+    // function update () {
+    // circle (player.x, player.y, player.size, player.speed, color= mixColor(255, 255))
+
+    // if (player.x + player.size > totalWidth) { 
+    //   player.x = totalWidth - player.size; 
+    // }
+    // if (player.x - player.size <1) {
+    //   player.x = 1 + player.size  
+    // }
+    // if (player.y - player.size <1) {
+    //   player.y = 1 + player.size
+    // }
+    // if (player.y + player.size > totalHeight) {
+    //   player.y = totalHeight - player.size
+    // }}
+    
+
+  </script>
+</body>
+</html>
