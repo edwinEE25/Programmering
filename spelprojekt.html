@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 1</title>
+  <style>
+    body {
+      background-image: url("bg.jpg");
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+   var player= circle(x=200,y=200,size=10,color="red",speed=1)
+   
+  
+    // picture(0,0, "bg.jpg", totalWidth, totalHeight)
+    circle(450, 540, 300, "#23232323")
+    circle(1250, 550, 300, "#23232323")
+    rectangle(350, 250, 1000, 100, "red")
+    rectangle(350, 735, 1000, 100, "red")
+   function update() {
+  clearScreen();
+  
+  circle(player.x, player.y, player.size, player.color);
+   
+  if (keyboard.right) {
+    player.x = player.x + player.speed;
+  }
+  if (keyboard.left) {
+    player.x = player.x - player.speed;
+  }
+  if (keyboard.up) {
+    player.y = player.y - player.speed;
+  }
+  if (keyboard.down) {
+    player.y = player.y + player.speed;
+  }}
+  </script>
+</body>
+</html>
