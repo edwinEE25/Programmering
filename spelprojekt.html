@@ -13,15 +13,35 @@
 </head>
 <body>
   <script src="http://koda.nu/simple.js">
-   var player= circle(x=200,y=200,size=10,color="red",speed=1)
-   
-  
-    // picture(0,0, "bg.jpg", totalWidth, totalHeight)
-    circle(450, 540, 300, "#23232323")
-    circle(1250, 550, 300, "#23232323")
-    rectangle(350, 250, 1000, 100, "red")
-    rectangle(350, 735, 1000, 100, "red")
-   function update() {
+   var player = {x: 200, y: 200, size: 10, color: "red", speed: 5};
+   var VANSTERc = {x: 450, y:540, size: 300, color: "#00ff00ff"  };
+   var UPPEk = {x: 375, y: 250, bredd: 920, hojd: 100, color: "#0000ffff" }
+   var HOGERc = {x: 1250, y: 540, size: 295, color: "#00ff00ff" }
+   var NEREk = {x: 350, y: 735, bredd: 1000, hojd: 100, color: "#0000ffff"}
+   var MITTvc = {x: 510, y: 545, size: 210, color: "red"}
+   var MITThc = {x: 1190, y:545, size: 210, color: "red"}
+
+
+    var leftCircleOuter
+    var leftCircleInner
+
+    // function oval(x, y, rx, ry, color) {
+    //   save();
+    //   translate(x,y);
+    //   scale(rx / ry, 1);
+    //   circle(0, 0, ry, color);
+    //   restore();
+    // }
+
+
+     // picture(0,0, "bg.jpg", totalWidth, totalHeight)
+    // circle(450, 540, 300, "#23232323")
+    // circle(1250, 550, 300, "#23232323")
+    // rectangle(350, 250, 1000, 100, "red")
+    // rectangle(350, 735, 1000, 100, "red")
+   //när funktions uppdatering körs så uppdateras sidan om oh om igen och eftersom att den uppdateras så kan jag 
+   //röra på karaktären genom tangenterna
+    function update() {
   clearScreen();
   
   circle(player.x, player.y, player.size, player.color);
@@ -37,7 +57,14 @@
   }
   if (keyboard.down) {
     player.y = player.y + player.speed;
-  }}
+  } 
+    circle(VANSTERc.x, VANSTERc.y, VANSTERc.size, VANSTERc.color)
+    circle(HOGERc.x, HOGERc.y, HOGERc.size, HOGERc.color)
+    rectangle(UPPEk.x, UPPEk.y, UPPEk.bredd, UPPEk.hojd, UPPEk.color)
+    rectangle(NEREk.x, NEREk.y, NEREk.bredd, NEREk.hojd, NEREk.color)
+    circle(MITTvc.x, MITTvc.y, MITTvc.size, MITTvc.color)
+    circle(MITThc.x, MITThc.y, MITThc.size, MITThc.color)
+}
   </script>
 </body>
 </html>
